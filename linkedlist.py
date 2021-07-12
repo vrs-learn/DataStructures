@@ -15,9 +15,7 @@ class LinkedList:
         if self.head is None:
             self.head = Node(data,None)
             return
-        
         itr = self.head
-
         while itr.next:
             itr = itr.next
         
@@ -32,14 +30,44 @@ class LinkedList:
         llstr = ''
         while itr:
             llstr += str(itr.data) + " --> " if itr.next else str(itr.data)
-            itr = itr.next
-        
+            itr = itr.next        
         print(llstr)
     
+    def get_length(self):
+        count = 0
+        itr = self.head
+        while itr.next:
+            count += 1
+            itr = itr.next
+        return count
+
+    def insert_at(self,index,data):
+        if index<0 or index>self.get_length():
+            raise Exception("Invalid Index")
+        
+        if index==0:
+            new_node = Node(data,self.head)
+            self.head = new_node
+            return
+        else:
+            count = 0
+            itr = self.head
+            while itr:
+                if count == index - 1:
+                    new_node = Node(data,itr.next)
+                    itr.next = new_node
+                    break
+                itr = itr.next
+                count += 1
+
+
+
+
+
 
 ll = LinkedList()
 ll.add_node("banana")
 ll.add_node("apple")
 ll.add_node("grapes")
-ll.insert_at_beggining("Fruits")
+ll.insert_at(2,"LAUKI")
 ll.print_all_nodes()
