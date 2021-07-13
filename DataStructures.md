@@ -14,3 +14,10 @@ For example:
     This values is derived as the for loop is running n times to identify the integer.
 - Similarly if I am using Binary tree, if I have to calculate the number of iterations to reach the number, I would calculate the time taken as O(log n).
 
+### Linked List
+In Python linked list is not implemented directly. To store a linked list, we can use a class to imitate the same. 
+See example in : linkedlist.py
+
+
+### Hash Tables
+In Python the hash tables implementation is called Dictionary.

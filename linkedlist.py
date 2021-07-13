@@ -60,6 +60,10 @@ class LinkedList:
                 itr = itr.next
                 count += 1
 
+    def delete_first(self):
+        self.head = self.head.next
+        return
+    
 
 
 
@@ -70,4 +74,7 @@ ll.add_node("banana")
 ll.add_node("apple")
 ll.add_node("grapes")
 ll.insert_at(2,"LAUKI")
+ll.insert_at(2,"TORAI")
+ll.print_all_nodes()
+ll.delete_first()
 ll.print_all_nodes()
