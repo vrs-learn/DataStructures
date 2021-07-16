@@ -18,6 +18,7 @@ For example:
 In Python linked list is not implemented directly. To store a linked list, we can use a class to imitate the same. 
 See example in : linkedlist.py
 
-
 ### Hash Tables
 In Python the hash tables implementation is called Dictionary.
+See example: hashtable.py
+
